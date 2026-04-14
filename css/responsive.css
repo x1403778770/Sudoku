@@ -1,0 +1,116 @@
+@media (max-width: 360px) {
+  .grid-cell {
+    width: 34px;
+    height: 34px;
+  }
+
+  .cell-value {
+    font-size: 16px;
+  }
+
+  .sudoku-grid[data-size="4"] .grid-cell {
+    width: 56px;
+    height: 56px;
+  }
+
+  .sudoku-grid[data-size="6"] .grid-cell {
+    width: 44px;
+    height: 44px;
+  }
+
+  .sudoku-grid[data-size="16"] .grid-cell {
+    width: 22px;
+    height: 22px;
+  }
+
+  .num-btn {
+    font-size: 17px;
+  }
+
+  .note-num {
+    font-size: 7px;
+  }
+}
+
+@media (min-width: 768px) {
+  .grid-cell {
+    width: 46px;
+    height: 46px;
+  }
+
+  .cell-value {
+    font-size: 22px;
+  }
+
+  .sudoku-grid[data-size="4"] .grid-cell {
+    width: 80px;
+    height: 80px;
+  }
+
+  .sudoku-grid[data-size="6"] .grid-cell {
+    width: 60px;
+    height: 60px;
+  }
+
+  .sudoku-grid[data-size="16"] .grid-cell {
+    width: 30px;
+    height: 30px;
+  }
+
+  .num-btn {
+    font-size: 22px;
+  }
+
+  .note-num {
+    font-size: 9px;
+  }
+}
+
+@media (min-width: 1024px) {
+  #app {
+    max-width: 500px;
+  }
+
+  .grid-cell {
+    width: 42px;
+    height: 42px;
+  }
+
+  .cell-value {
+    font-size: 20px;
+  }
+}
+
+@media (max-height: 600px) {
+  .grid-cell {
+    width: 32px;
+    height: 32px;
+  }
+
+  .cell-value {
+    font-size: 14px;
+  }
+
+  .game-header {
+    padding: 4px 8px;
+  }
+
+  .toolbar-wrapper {
+    padding: 2px 8px;
+  }
+
+  .numpad-wrapper {
+    padding: 4px 12px 8px;
+  }
+
+  .num-btn {
+    font-size: 16px;
+  }
+}
+
+@media (max-height: 700px) and (min-width: 361px) {
+  .grid-cell {
+    width: 36px;
+    height: 36px;
+  }
+}

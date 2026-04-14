@@ -1,0 +1,121 @@
+[data-theme="dark"] {
+  --bg: #1A1A2E;
+  --bg-card: #252545;
+  --text: #E0E0E0;
+  --text-secondary: #AAAAAA;
+  --text-muted: #777777;
+  --primary: #64B5F6;
+  --primary-light: #90CAF9;
+  --primary-dark: #42A5F5;
+  --accent: #EF5350;
+  --success: #66BB6A;
+  --warning: #FFA726;
+  --border: #3A3A5E;
+  --shadow: rgba(0,0,0,0.3);
+  --grid-thin: #3A3A5E;
+  --grid-thick: #6A6A9E;
+  --cell-bg: #2A2A4E;
+  --cell-alt: #303060;
+  --cell-selected: #2A3A5E;
+  --cell-related: #1E2A4A;
+  --cell-same: #1B3A2A;
+  --cell-error: #4A1A1A;
+  --cell-duplicate: #4A3A1A;
+  --given-color: #E0E0E0;
+  --player-color: #64B5F6;
+  --error-color: #EF5350;
+  --note-color: #757575;
+}
+
+[data-theme="dark"] .diff-btn {
+  border-color: var(--border);
+  color: var(--text);
+}
+
+[data-theme="dark"] .diff-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+[data-theme="dark"] .diff-btn.primary {
+  background: var(--primary);
+  color: #1A1A2E;
+  border-color: var(--primary);
+}
+
+[data-theme="dark"] .num-btn {
+  background: var(--bg-card);
+  color: var(--primary);
+}
+
+[data-theme="dark"] .num-btn:active {
+  background: var(--primary);
+  color: #1A1A2E;
+}
+
+[data-theme="dark"] .tool-btn {
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .tool-btn.active {
+  color: var(--primary);
+  background: rgba(100,181,246,0.15);
+}
+
+[data-theme="dark"] .slider {
+  background: var(--border);
+}
+
+[data-theme="dark"] .stat-box {
+  background: var(--border);
+}
+
+[data-theme="dark"] .setting-item select {
+  background: var(--bg-card);
+  color: var(--text);
+  border-color: var(--border);
+}
+
+[data-theme="dark"] .btn-secondary {
+  background: var(--border);
+  color: var(--text);
+}
+
+[data-theme="dark"] .pause-content {
+  background: var(--bg-card);
+}
+
+[data-theme="dark"] .modal-content {
+  background: var(--bg-card);
+}
+
+@media (prefers-color-scheme: dark) {
+  [data-theme="light"] {
+    --bg: #F5F5F5;
+    --bg-card: #FFFFFF;
+    --text: #1A1A2E;
+    --text-secondary: #666666;
+    --text-muted: #999999;
+    --primary: #4A6FA5;
+    --primary-light: #6B8FC5;
+    --primary-dark: #3A5A8A;
+    --accent: #E74C3C;
+    --success: #27AE60;
+    --warning: #F39C12;
+    --border: #E0E0E0;
+    --shadow: rgba(0,0,0,0.08);
+    --grid-thin: #D0D0D0;
+    --grid-thick: #808080;
+    --cell-bg: #FFFFFF;
+    --cell-alt: #F8F9FA;
+    --cell-selected: #BBDEFB;
+    --cell-related: #E3F2FD;
+    --cell-same: #C8E6C9;
+    --cell-error: #FFCDD2;
+    --cell-duplicate: #FFE0B2;
+    --given-color: #1A1A2E;
+    --player-color: #4A6FA5;
+    --error-color: #E74C3C;
+    --note-color: #9E9E9E;
+  }
+}
