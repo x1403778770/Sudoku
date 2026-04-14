@@ -30,7 +30,7 @@ window.CircularGenerator = (function () {
       for (var s = 0; s < SEGMENTS; s++) {
         if (board[r][s] === 0) {
           var nums = [];
-          for (var i = 0; i <= 9; i++) nums.push(i);
+          for (var i = 1; i <= 10; i++) nums.push(i);
           nums = shuffleWithRng(nums, rng);
           for (var k = 0; k < nums.length; k++) {
             if (isValidPlacement(board, r, s, nums[k])) {
@@ -62,7 +62,7 @@ window.CircularGenerator = (function () {
     if (!success) {
       for (var r = 0; r < RINGS; r++) {
         for (var s = 0; s < SEGMENTS; s++) {
-          solved[r][s] = (r + s) % 10;
+          solved[r][s] = (r + s) % 10 + 1;
         }
       }
     }

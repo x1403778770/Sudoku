@@ -26,7 +26,7 @@ window.InputHandler = (function () {
     if (key >= '1' && key <= '9') {
       e.preventDefault();
       GameEngine.placeNumber(parseInt(key));
-    } else if (key === '0' && game.size === 16) {
+    } else if (key === '0' && (game.size === 16 || game.mode === 'circular')) {
       e.preventDefault();
       GameEngine.placeNumber(10);
     } else if (key.toLowerCase() >= 'a' && key.toLowerCase() <= 'g' && game.size === 16) {

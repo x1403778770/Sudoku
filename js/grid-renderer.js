@@ -96,11 +96,13 @@ window.GridRenderer = (function () {
         classes.push('duplicate');
       }
     }
-    var boxSize = size === 9 ? 3 : size === 6 ? 3 : size === 4 ? 2 : size === 16 ? 4 : 3;
-    var boxH = size === 6 ? 2 : boxSize;
-    var boxW = size === 6 ? 3 : boxSize;
-    if (col % boxW === 0 && col > 0) classes.push('box-left');
-    if (row % boxH === 0 && row > 0) classes.push('box-top');
+    if (!game.jigsawRegions) {
+      var boxSize = size === 9 ? 3 : size === 6 ? 3 : size === 4 ? 2 : size === 16 ? 4 : 3;
+      var boxH = size === 6 ? 2 : boxSize;
+      var boxW = size === 6 ? 3 : boxSize;
+      if (col % boxW === 0 && col > 0) classes.push('box-left');
+      if (row % boxH === 0 && row > 0) classes.push('box-top');
+    }
     return classes;
   }
 
@@ -264,7 +266,7 @@ window.GridRenderer = (function () {
     var maxNum = game.mode === 'circular' ? 10 : (game.size === 16 ? 16 : game.size === 6 ? 6 : game.size === 4 ? 4 : 9);
     var cols = maxNum <= 9 ? 9 : (maxNum <= 10 ? 10 : 8);
     var html = '<div class="number-pad" style="grid-template-columns:repeat(' + cols + ',1fr);">';
-    var startNum = game.mode === 'circular' ? 0 : 1;
+    var startNum = game.mode === 'circular' ? 1 : 1;
     for (var i = startNum; i <= maxNum; i++) {
       var display = game.size === 16 && i > 9 ? String.fromCharCode(55 + i) : i;
       var count = GameEngine.getCellsWithNumber(i).length;
