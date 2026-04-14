@@ -1,0 +1,171 @@
+.sudoku-grid {
+  position: relative;
+  display: inline-block;
+}
+
+.grid-table {
+  border-collapse: collapse;
+  background: var(--grid-thin);
+  border: 2px solid var(--grid-thick);
+}
+
+.grid-cell {
+  width: 38px;
+  height: 38px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background: var(--cell-bg);
+  border: 0.5px solid var(--grid-thin);
+  position: relative;
+  transition: background-color 0.1s;
+}
+
+.sudoku-grid[data-size="4"] .grid-cell {
+  width: 64px;
+  height: 64px;
+}
+
+.sudoku-grid[data-size="6"] .grid-cell {
+  width: 50px;
+  height: 50px;
+}
+
+.sudoku-grid[data-size="16"] .grid-cell {
+  width: 26px;
+  height: 26px;
+  font-size: 11px;
+}
+
+.grid-cell.box-left {
+  border-left: 2px solid var(--grid-thick);
+}
+
+.grid-cell.box-top {
+  border-top: 2px solid var(--grid-thick);
+}
+
+.grid-cell.given .cell-value {
+  color: var(--given-color);
+  font-weight: 700;
+}
+
+.grid-cell.player .cell-value {
+  color: var(--player-color);
+  font-weight: 500;
+}
+
+.grid-cell.selected {
+  background: var(--cell-selected) !important;
+}
+
+.grid-cell.related {
+  background: var(--cell-related);
+}
+
+.grid-cell.same-number {
+  background: var(--cell-same);
+}
+
+.grid-cell.error .cell-value {
+  color: var(--error-color) !important;
+}
+
+.grid-cell.error {
+  background: var(--cell-error) !important;
+}
+
+.grid-cell.duplicate .cell-value {
+  color: var(--warning) !important;
+}
+
+.grid-cell.duplicate {
+  background: var(--cell-duplicate) !important;
+}
+
+.cell-value {
+  font-size: 18px;
+  line-height: 1;
+  display: block;
+  animation: cellPop 0.2s ease-out;
+}
+
+.sudoku-grid[data-size="4"] .cell-value {
+  font-size: 28px;
+}
+
+.sudoku-grid[data-size="6"] .cell-value {
+  font-size: 22px;
+}
+
+.sudoku-grid[data-size="16"] .cell-value {
+  font-size: 11px;
+}
+
+.cell-notes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 100%;
+  height: 100%;
+  padding: 1px;
+}
+
+.sudoku-grid[data-size="4"] .cell-notes {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.sudoku-grid[data-size="6"] .cell-notes {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.sudoku-grid[data-size="16"] .cell-notes {
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.note-num {
+  font-size: 8px;
+  color: var(--note-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.sudoku-grid[data-size="4"] .note-num {
+  font-size: 12px;
+}
+
+.sudoku-grid[data-size="6"] .note-num {
+  font-size: 9px;
+}
+
+.sudoku-grid[data-size="16"] .note-num {
+  font-size: 6px;
+}
+
+.note-num.empty {
+  visibility: hidden;
+}
+
+.killer-sum {
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--accent);
+  font-style: italic;
+  line-height: 1;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.circular-canvas {
+  display: block;
+  margin: 0 auto;
+  touch-action: none;
+}

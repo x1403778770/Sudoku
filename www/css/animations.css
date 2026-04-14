@@ -1,0 +1,74 @@
+@keyframes cellPop {
+  0% { transform: scale(0.5); opacity: 0; }
+  60% { transform: scale(1.15); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-4px); }
+  40% { transform: translateX(4px); }
+  60% { transform: translateX(-3px); }
+  80% { transform: translateX(3px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes celebrate {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.grid-cell.error {
+  animation: shake 0.4s ease-in-out;
+}
+
+.modal-content {
+  animation: slideUp 0.3s ease-out;
+}
+
+.action-card {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.mode-card {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.completion-modal .modal-icon {
+  animation: celebrate 0.6s ease-in-out;
+}
+
+.grid-cell.selected {
+  transition: background-color 0.1s ease;
+}
+
+.num-btn {
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.tool-btn {
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.btn {
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.diff-btn {
+  transition: all 0.2s ease;
+}
