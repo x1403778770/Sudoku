@@ -4,7 +4,8 @@
   "description": "一款基于 HTML5 的多模式数独游戏，支持经典数独、杀手数独、拼图数独、迷你数独、巨无霸数独和环状数独。可通过 Capacitor 打包为 Android APK。",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "echo \"Web app is ready - Capacitor will sync the www folder\""
   },
   "keywords": [],
   "author": "",
