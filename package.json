@@ -1,1 +1,33 @@
-{"name": "sudoku", "version": "1.0.0", "description": "一款基于 HTML5 的多模式数独游戏，支持经典数独、杀手数独、拼图数独、迷你数独、巨无霸数独和环状数独。", "main": "main.js", "scripts": {"test": "echo \"Error: no test specified\" && exit 1", "start": "electron .", "build": "npx electron-builder --win", "build:dir": "npx electron-builder --win --dir"}, "keywords": [], "author": "", "license": "ISC", "dependencies": {"@capacitor/android": "^8.3.0", "@capacitor/cli": "^8.3.0", "@capacitor/core": "^8.3.0"}, "devDependencies": {"electron": "^35.7.5", "electron-builder": "^26.8.1"}, "build": {"appId": "com.sudoku.master", "productName": "SudokuMaster", "directories": {"output": "release"}, "files": ["www/**/*", "main.js"], "win": {"target": ["nsis", "portable"], "icon": "www/icon.png"}, "nsis": {"oneClick": false, "allowToChangeInstallationDirectory": true, "createDesktopShortcut": true, "createStartMenuShortcut": true, "shortcutName": "Sudoku Master"}}}
+{
+  "name": "sudoku",
+  "version": "1.0.0",
+  "description": "一款基于 HTML5 的多模式数独游戏，支持经典数独、杀手数独、拼图数独、迷你数独、巨无霸数独和环状数独。",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win",
+    "build:dir": "electron-builder --win --dir"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^35.7.5",
+    "electron-builder": "^26.8.1"
+  },
+  "build": {
+    "appId": "com.sudoku.master",
+    "productName": "SudokuMaster",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "www/**/*",
+      "main.js"
+    ],
+    "win": {
+      "target": [
+        "portable"
+      ]
+    }
+  }
+}

@@ -1,8 +1,0 @@
-{
-  "appId": "com.sudoku.master",
-  "appName": "数独大师",
-  "webDir": "www",
-  "server": {
-    "androidScheme": "https"
-  }
-}
